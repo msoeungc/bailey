@@ -20,6 +20,7 @@ h1, h2, p {
 .container-fluid-about {
   padding: 5% 25%;
 }
+
 /* Headings */
 .title-heading {
   font-size: 3.5rem;
@@ -71,6 +72,7 @@ h1, h2, p {
   margin: -10% 0 -20% 30%;
   border-radius: 7%;
   transform: rotate(27deg);
+  box-shadow: 3px 3px 5px #000000;
 }
 
 /* Bails carousel */
@@ -83,6 +85,7 @@ h1, h2, p {
   max-height: 350px;
   border-radius: 50%;
   margin: 20px;
+  box-shadow: 3px 3px 5px #000000;
 }
 
 /* Bails image grid */
@@ -91,12 +94,18 @@ h1, h2, p {
   max-width: 295px;
   max-height: 295px;
   margin: 10px 5px;
+  box-shadow: 3px 3px 5px #000000;
 }
 
 /* Bails vid */
 .vid-desc {
-  margin: 10% 0 0 0;
-  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+.home-vid {
+  margin: 5% 0 0 0;
+  width: 50%;
 }
 
 /* Sign up Section */
@@ -127,6 +136,7 @@ h1, h2, p {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  box-shadow: 3px 3px 5px #000000;
 }
 
 /* About Section */
@@ -148,17 +158,20 @@ h1, h2, p {
   max-width: 300px;
   float: right;
   border-radius: 20%;
+  box-shadow: 3px 3px 5px #000000;
 }
 
 .about-img2 {
   max-width: 300px;
   float: left;
   border-radius: 20%;
+  box-shadow: 3px 3px 5px #000000;
 }
 
 .about-img3 {
   margin-top: 5%;
   border-radius: 50%;
+  box-shadow: 3px 3px 5px #000000;
 }
 
 /* Pricing Section */
@@ -193,6 +206,14 @@ h1, h2, p {
 
 /* Media query */
 @media (max-width: 1028px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
   .title-heading, .title-content {
     text-align: center;
   }
@@ -202,5 +223,6 @@ h1, h2, p {
     margin: auto;
     max-width: 200px;
     transform: rotate(0deg);
+    box-shadow: 3px 3px 5px #000000;
   }
 }

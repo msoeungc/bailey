@@ -14,7 +14,9 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 // set up bodyParser use
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // connect to mongoose db
 mongoose.connect("mongodb+srv://admin-matt:Bailey123@cluster0.dcczm.mongodb.net/baileyDB", {
@@ -35,10 +37,6 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.get("/pricing", function(req, res) {
-  res.render("pricing");
-});
-
 app.get("/signup", function(req, res) {
   res.render("signup");
 });
@@ -53,7 +51,7 @@ app.get("/contact", function(req, res) {
 
 app.post("/signup", function(req, res) {
   const newUserEmail = req.body.userEmail;
-// creating a new mongoose document in the Email collection
+  // creating a new mongoose document in the Email collection
   const newEmail = new Email({
     email: newUserEmail
   });
