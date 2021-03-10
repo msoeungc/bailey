@@ -73,7 +73,7 @@ h1, h2, p {
   transform: rotate(27deg);
 }
 
-/* Bails carousel section */
+/* Bails carousel */
 .carousel-sec {
   position: relative;
   padding: 5% 0;
@@ -85,12 +85,18 @@ h1, h2, p {
   margin: 20px;
 }
 
-/* Home last section */
+/* Bails image grid */
 .home-imgs {
   border-radius: 15%;
   max-width: 295px;
   max-height: 295px;
   margin: 10px 5px;
+}
+
+/* Bails vid */
+.vid-desc {
+  margin: 10% 0 0 0;
+  text-align: center;
 }
 
 /* Sign up Section */
