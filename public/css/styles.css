@@ -97,6 +97,10 @@ h1, h2, p {
   box-shadow: 3px 3px 5px #000000;
 }
 
+.caption {
+  margin: auto;
+}
+
 /* Bails vid */
 .vid-desc {
   margin: auto;
@@ -109,9 +113,19 @@ h1, h2, p {
 }
 
 /* Sign up Section */
+.card-signup {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: #5F939A;
+  width: 30%;
+  margin: auto;
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
+  z-index: 100;
   padding: 15px;
   margin: auto;
 }
@@ -133,9 +147,10 @@ h1, h2, p {
 }
 
 .signup-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  margin: auto;
+  width: 600px;
+  opacity: 0.2;
+  border-radius: 7%;
   box-shadow: 3px 3px 5px #000000;
 }
 
@@ -174,17 +189,24 @@ h1, h2, p {
   box-shadow: 3px 3px 5px #000000;
 }
 
-/* Pricing Section */
-.pricing-header {
-  max-width: 700px;
+/* Contact page */
+.contact-container {
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.card-deck .card {
-  min-width: 220px;
+.contact-container p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 10%;
 }
 
-.pricing-card-title {
-  color: #000000;
+.contact-img {
+  opacity: 0.6;
+  border-radius: 7%;
 }
 
 /* Success page */
