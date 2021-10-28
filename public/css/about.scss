@@ -1,0 +1,60 @@
+@import "_variables.scss";
+/* About Section */
+.transparent-bg {
+  background-color: rgba(59, 105, 120, 0.6);
+  width: 100%;
+}
+
+.about-background {
+  background: url("../images/bailsbeachbg.jpg") center/cover;
+  transform: translateY(2rem);
+  filter: grayscale(40%);
+  width: 100vw;
+  height: 100vh;
+  /* position fixed -> element taken out of document flow, positiong context = viewport*/
+  position: fixed;
+  /* z-index only works if element also has a position property not static */
+  z-index: -1;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 7rem 0;
+}
+
+.about {
+  width: 50%;
+  border: 3px solid lighten(map-get($colors, main), 40%);
+  border-radius: 3%;
+  position: relative;
+  overflow: hidden;
+  background: rgba(132, 169, 172, 0.4);
+  color: map-get($colors, tertiary);
+  font-size: 1.3rem;
+  margin: 3rem;
+  padding: 1rem 2rem;
+}
+
+.about1,
+.about3 {
+  align-self: flex-start;
+}
+
+.about2,
+.about4 {
+  align-self: flex-end;
+}
+
+@media (max-width: 40rem) {
+  .about {
+    width: 80%;
+    padding: 1rem;
+    margin: 2rem;
+  }
+
+  .about1, .about2, .about3, .about4 {
+    align-self: center;
+  }
+}

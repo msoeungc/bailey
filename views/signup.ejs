@@ -1,15 +1,29 @@
-<%- include("partials/header"); -%>
-<section class="color-sec">
-  <div class="container-fluid color-sec">
-    <h1>Sign Up!</h1>
-    <div class="card-signup">
-      <form class="form-signin" action="/signup" method="post">
-        <h1 class="h3 mb-3 font-weight-normal">Please sign up for more Bailey Pics!</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" name="userEmail" class="form-control" placeholder="Email address" required autofocus>
-        <button class="btn btn-md btn-dark btn-block" type="submit">Bailey Pics!</button>
-      </form>
+<%- include("partials/head"); -%>
+
+<body>
+  <div class="main-grid">
+    <div class="header">
+      <%- include("partials/header"); -%>
     </div>
+    <main class="main">
+      <div class="signup-background"></div>
+      <div class="signup-container">
+        <img class="signup-img" src="/images/bailsBlep.jpg"/>
+        <h1 class="signup-header">SIGN UP</h1>
+        <h2 class="signup-text">Please enter your email to receive more images of Bailey and Scout</h2>
+        <div class="form-container">
+          <div class="card-signup">
+            <form class="form-signin" action="/signup" method="post">
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="email" id="inputEmail" name="userEmail" class="form-control" placeholder="Email address" required autofocus>
+              <button class="btn btn-md btn-block signup-btn" type="submit">Bailey & Scout Pics!</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <%- include("partials/footer"); -%>
+    </footer>
   </div>
-</section>
-<%- include("partials/footer"); -%>
+</body>

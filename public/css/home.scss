@@ -1,0 +1,203 @@
+@import "_variables.scss"; /* Section color */
+/* Home Section */
+
+.bailsface-img {
+  margin: -10% 0 -20% 30%;
+  border-radius: 7%;
+  transform: rotate(27deg);
+  box-shadow: 3px 3px 5px #000000;
+}
+
+.header-flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6rem 15rem 16rem;
+}
+/* Bails carousel */
+
+.carousel {
+  padding: 2rem 0;
+}
+
+.carousel-sec {
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+
+.carousel-img {
+  max-height: 555px;
+  max-width: 90%;
+  border-radius: 3%;
+  margin: 2rem;
+  box-shadow: $boxshadow;
+}
+/* Bails image grid */
+
+.home-img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3, 40rem);
+  grid-template-areas: "img1 des1" "des2 img2" "img3 des3";
+}
+
+.home-imgs {
+  box-shadow: $boxshadow;
+  border-radius: 3%;
+  max-width: 500px;
+
+  &:active,
+  &:hover {
+    animation: lift-img 500ms ease-out forwards;
+  }
+}
+
+.home-des h4 {
+  font-size: 1.5rem;
+  color: map-get($colors, tertiary);
+}
+
+.home-img1 {
+  @include display-flex();
+  grid-area: img1;
+  margin-left: 10rem;
+}
+
+.home-des1 {
+  @include display-flex();
+  grid-area: des1;
+  margin-left: -10rem;
+}
+
+.home-img2 {
+  @include display-flex();
+  grid-area: img2;
+  margin-left: -10rem;
+}
+
+.home-des2 {
+  @include display-flex();
+  grid-area: des2;
+  margin-left: 10rem;
+}
+
+.home-img3 {
+  @include display-flex();
+  grid-area: img3;
+  margin-left: 10rem;
+}
+
+.home-des3 {
+  @include display-flex();
+  grid-area: des3;
+  margin-left: -10rem;
+}
+/* Bails vid */
+.vid-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.vid-desc {
+  font-size: 2rem;
+  margin: auto;
+  width: 60%;
+  color: map-get($colors, tertiary);
+}
+
+.home-vid {
+  margin: auto;
+  width: 50%;
+}
+@keyframes lift-img {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(-1.5rem);
+  }
+
+  100% {
+    transform: translateY(-1.0rem);
+  }
+}
+@media (max-width: 40rem) {
+
+  .header-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin: auto;
+    padding: 3rem 7rem 12rem;
+  }
+
+  h1.title-heading {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+
+  .bailsface-img {
+    max-width: 20rem;
+    transform: rotate(0deg);
+    box-shadow: 3px 3px 5px #000000;
+    margin: 0;
+  }
+
+  .carousel-img {
+    max-height: 335px;
+  }
+
+  .home-img-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-des1,
+  .home-des2,
+  .home-des3 {
+    display: none;
+  }
+
+  .home-img1,
+  .home-img2,
+  .home-img3 {
+    margin: auto;
+    padding: 2rem 0;
+  }
+
+.home-imgs {
+  max-width: 300px;
+}
+
+  .vid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .vid-desc {
+    font-size: 1rem;
+    margin: auto;
+    width: 100%;
+    color: map-get($colors, tertiary);
+  }
+
+  .home-vid {
+    margin: 0;
+    width: 100%;
+  }
+
+}

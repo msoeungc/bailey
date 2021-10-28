@@ -1,0 +1,66 @@
+@import "_variables.scss";
+
+/* Contact page */
+.contact-backgound {
+  background: url("../images/bailsandscout.jpg") center/cover;
+  transform: translateY(2rem);
+  filter: grayscale(40%);
+  width: 100vw;
+  height: 100vh;
+  /* position fixed -> element taken out of document flow, positiong context = viewport*/
+  position: fixed;
+  /* z-index only works if element also has a position property not static */
+  z-index: -1;
+}
+
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 30rem 0;
+  background-color: rgba(59, 105, 120, 0.6);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  width: 25rem;
+  border: 3px solid lighten(map-get($colors, main), 40%);
+  border-radius: 3%;
+  background: rgba(132, 169, 172, 0.4);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.contact-img {
+  max-height: 150px;
+  border-radius: 50%;
+  border: 3px solid lighten(map-get($colors, main), 40%);
+  margin-top: 0.5rem;
+}
+
+.contact-info {
+  text-align: left;
+  font-size: 1.3rem;
+  color: map-get($colors, tertiary);
+}
+
+@media (max-width: 40rem) {
+  .contact-container {
+    flex-direction: column;
+    padding: 5rem 0;
+    margin: auto;
+  }
+
+  .contact-card {
+    width: 80%;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}

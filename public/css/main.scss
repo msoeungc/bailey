@@ -1,0 +1,124 @@
+@import "navbar.scss";
+@import "home.scss";
+@import "sign-up.scss";
+@import "about.scss";
+@import "contact.scss";
+@import "_variables.scss";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.color-sec,
+ {
+  background-color: map-get($colors, main);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+.nocolor-sec {
+  background-color: map-get($colors, secondary);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+.footer,
+.header,
+.navbar {
+  background-color: darken(map-get($colors, main), 7%);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+.main-grid {
+  display: grid;
+  grid-template-rows: 3.5rem auto fit-content(8rem);
+  grid-template-areas: "header" "main" "footer";
+  height: 100%;
+  align-items: stretch;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  grid-area: header;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+h1,
+h2,
+p {
+  color: map-get($colors, tertiary);
+}
+/* Headings */
+
+.title-heading {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: left;
+}
+
+.title-content {
+  text-align: left;
+  color: grey;
+}
+/* Success page */
+
+.success {
+  font-size: 5rem;
+  font-weight: 500;
+}
+/* Footer */
+
+.hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+@media (max-width: 40rem) {
+  .title-content,
+  .title-heading {
+    text-align: center;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+
+  .home-img-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-des1,
+  .home-des2,
+  .home-des3 {
+    display: none;
+  }
+
+  .home-img1,
+  .home-img2,
+  .home-img3 {
+    margin: auto;
+    padding: 2rem 0;
+  }
+}

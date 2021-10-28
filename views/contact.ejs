@@ -1,19 +1,37 @@
-<%- include("partials/header"); -%>
-<section class="color-sec">
-  <div class="container-fluid">
-    <h1>Contact Us</h1>
-    <div class="contact-container">
-      <div class="row">
-        <div class="col-lg-12">
-          <img class="contact-img" src="/images/bailsBlep.jpg" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute
+<%- include("partials/head"); -%>
 
-        </div>
-      </div>
+<body>
+  <div class="main-grid">
+    <div class="header">
+      <%- include("partials/header"); -%>
     </div>
+    <main class="main">
+      <div class="contact-backgound"></div>
+        <div class="contact-container">
+          <div class="contact-card">
+            <img class="contact-img" src="/images/bailsmodel.jpg">
+            </img>
+            <div class="contact-info">
+              Name: Bailey <br />
+              Cellphone number: (098)123-4567 <br />
+              Email: Baileyiscute@email.com <br />
+              Address: 42 Wallaby Way, Sydney <br />
+            </div>
+          </div>
+          <div class="contact-card">
+            <img class="contact-img" src="/images/scoutyelloweyes.jpg">
+            </img>
+            <div class="contact-info">
+              Name: Scout <br />
+              Cellphone number: (098)123-4567 <br />
+              Email: Scoutiscute@email.com <br />
+              Address: 42 Wallaby Way, Sydney <br />
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer class="footer">
+      <%- include("partials/footer"); -%>
+    </footer>
   </div>
-</section>
-
-<%- include("partials/footer"); -%>
+</body>

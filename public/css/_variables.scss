@@ -1,0 +1,7 @@
+$colors:(main: #3B6978, secondary: #84A9AC, tertiary: #E4E3E3);
+$boxshadow: 3px 3px 5px #000000;
+@mixin display-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

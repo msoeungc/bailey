@@ -1,49 +1,51 @@
-<%- include("partials/header"); -%>
-<section class="color-sec">
-  <div class="container-fluid-about">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="about-header">About Bailey</h1>
-      </div>
+<%- include("partials/head"); -%>
+
+<body>
+  <div class="main-grid">
+    <div class="header">
+      <%- include("partials/header"); -%>
     </div>
-    <div class="row about-row">
-      <div class="col-lg-6">
-        <p class="aboutusContent">
-          Name: Bailey <br>
-          Nickname: Bails <br>
-          Breed: Shetland Sheepdog Mix <br>
-          Birthday: 01/16/13 <br>
-          Adoption Date: 01/21/15
-        </p>
+    <main class="main">
+      <div class="transparent-bg">
+        <div class="about-background"></div>
+        <section class="about-container">
+          <div class="about about1">
+            <p>
+              Name: Bailey <br>
+              Nickname: Bails <br>
+              Breed: Shetland Sheepdog Mix <br>
+              Birthday: 01/16/13 <br>
+              Adoption Date: 01/21/15
+            </p>
+          </div>
+          <div class="about about2">
+            <p>
+              Favorite snack: Dental sticks <br>
+              Favorite activity: Fetching (he does not do a great job of bringing the ball back) <br>
+              Other hobbies: Hiking and playing with his brother Scout
+            </p>
+          </div>
+          <div class="about about3">
+            <p>
+              Name: Scout <br>
+              Nickname: Boy Scout <br>
+              Breed: American Shorthair Tabby<br>
+              Birthday: 02/24/2019 <br>
+              Found on the streets in 2019 as a kitten
+            </p>
+          </div>
+          <div class="about about4">
+            <p>
+              Favorite snack: His kibble <br>
+              Favorite activity: Sleeping (He probably sleeps 14-16 hours day) <br>
+              Other hobbies: Hunting small critters, getting annoyed by his brother, Bailey
+            </p>
+          </div>
+        </section>
       </div>
-      <div class="col-lg-6">
-        <img class="about-img" src="/images/bailsBeach.jpg">
-      </div>
-    </div>
-    <div class="row about-row">
-      <div class="col-lg-6">
-        <img class="about-img2" src="/images/bailsTongue.jpg">
-      </div>
-      <div class="col-lg-6">
-        <p class="aboutusContent">
-          Favorite snack: Dental sticks <br>
-          Favorite activity: Fetching (does not bring ball back) <br>
-          Other hobbies: Hiking and playing with his friend Scout
-        </p>
-      </div>
-    </div>
+    </main>
+    <footer class="footer">
+      <%- include("partials/footer"); -%>
+    </footer>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2>Bonus Scout Picture</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <img class="about-img3" src="/images/scoutmad.JPG" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-<%- include("partials/footer"); -%>
+</body>
