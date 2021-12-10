@@ -95,7 +95,7 @@
   position: absolute; }
 
 .home-background2 {
-  background: url("/images/scoutBlanket.JPG") center/cover;
+  background: url("/images/scoutBlanket.jpg") center/cover;
   filter: grayscale(40%);
   width: 50%;
   height: 100%;
