@@ -86,7 +86,7 @@
   background-color: rgba(59, 105, 120, 0.6); }
 
 .home-background {
-  background: url("../images/bailsGarden.JPG") center/cover;
+  background: url("/images/bailsCouch.jpg") center/cover;
   background-color: rgba(59, 105, 120, 0.6);
   z-index: -1;
   filter: grayscale(40%);
@@ -95,7 +95,7 @@
   position: absolute; }
 
 .home-background2 {
-  background: url("../images/scoutBlanket.JPG") center/cover;
+  background: url("/images/scoutBlanket.JPG") center/cover;
   filter: grayscale(40%);
   width: 50%;
   height: 100%;
