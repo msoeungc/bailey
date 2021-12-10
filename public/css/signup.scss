@@ -1,0 +1,328 @@
+@import "_variables.scss";
+/*backgound*/
+.transparent-bg {
+  background-color: rgba(59, 105, 120, 0.6);
+  width: 100%;
+  height: 100%;
+}
+
+.signup-background {
+  background: url("../images/scoutmad.JPG") center/cover;
+  filter: grayscale(40%);
+  width: 100vw;
+  height: 100vh;
+  /* position fixed -> element taken out of document flow, positiong context = viewport*/
+  position: fixed;
+  /* z-index only works if element also has a position property not static */
+  z-index: -2;
+}
+/* Sign up Section */
+
+.signup-container {
+  width: 100%;
+  padding: 15rem 0;
+}
+
+.signup-card {
+  margin: auto;
+  @include display-flex();
+  flex-direction: column;
+  border-radius: 3%;
+  background: rgba(132, 169, 172, 0.4);
+  padding: 5rem 4rem;
+  width: 40rem;
+}
+
+.signup-img {
+  margin: auto;
+  width: 200px;
+  opacity: 0.6;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px #000000;
+}
+
+.signup-header {
+  font-size: 5rem;
+  color: map-get($colors, tertiary);
+  padding: 1rem 0;
+}
+
+.signup-text {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  color: map-get($colors, tertiary);
+}
+
+.form-container {
+  @include display-flex();
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.form-signin {
+  border-radius: 3%;
+  z-index: 10;
+  padding: 2rem;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+input.form-control {
+  margin-bottom: 1rem;
+}
+
+.signup-btn, .about-btn {
+  background-color: darken(map-get($colors, secondary), 30);
+  color: map-get($colors, tertiary);
+  border-radius: 3%;
+  box-shadow: 1px 1px 3px #000000;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.25rem 2.3rem;
+}
+@media (max-width: 640px) and (orientation: portrait) {
+  .signup-container {
+    @include display-flex();
+    width: 100%;
+    padding: 4rem 0 2rem;
+    margin: auto;
+    background-color: rgba(59, 105, 120, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .signup-card {
+    @include display-flex();
+    flex-direction: column;
+    border-radius: 3%;
+    background: rgba(132, 169, 172, 0.4);
+    padding: 1.5rem;
+    width: 80%;
+  }
+
+  .signup-header {
+    font-size: 3rem;
+    padding: 1rem 0;
+  }
+
+  .signup-text {
+    font-size: 1.2rem;
+    color: map-get($colors, tertiary);
+  }
+
+  .signup-img {
+    margin: auto;
+    width: 200px;
+    opacity: 0.6;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000000;
+  }
+
+  .form-container {
+    padding: 0.25rem;
+  }
+
+  .form-signin {
+    padding: 1rem;
+  }
+
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .signup-btn {
+    background-color: darken(map-get($colors, secondary), 30);
+    color: map-get($colors, tertiary);
+    border-radius: 3%;
+    box-shadow: 1px 1px 3px #000000;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media (max-width: 768.1px) and (min-width: 640.1px) and (orientation: portrait) {
+  .signup-container {
+    @include display-flex();
+    width: 100%;
+    padding: 5rem 0 3rem;
+    margin: auto;
+    background-color: rgba(59, 105, 120, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .signup-card {
+    @include display-flex();
+    flex-direction: column;
+    border-radius: 3%;
+    background: rgba(132, 169, 172, 0.4);
+    padding: 8rem 2.5rem;
+    width: 70%;
+  }
+
+  .signup-header {
+    font-size: 3rem;
+  }
+
+  .signup-text {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    color: map-get($colors, tertiary);
+  }
+
+  .signup-img {
+    margin: auto;
+    width: 200px;
+    opacity: 0.6;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000000;
+  }
+}
+@media (max-width: 1366px) and (min-width: 768.2px) and (orientation: portrait) {
+  .signup-container {
+    @include display-flex();
+    width: 100%;
+    padding: 8rem 0 6rem;
+    margin: auto;
+    background-color: rgba(59, 105, 120, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .signup-card {
+    @include display-flex();
+    flex-direction: column;
+    border-radius: 3%;
+    background: rgba(132, 169, 172, 0.4);
+    padding: 6rem 3rem;
+    width: 70%;
+  }
+
+  .signup-header {
+    font-size: 5rem;
+  }
+
+  .signup-text {
+    font-size: 2rem;
+    padding: 0 0.5rem;
+    color: map-get($colors, tertiary);
+  }
+
+  .signup-img {
+    margin: auto;
+    width: 400px;
+    opacity: 0.6;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000000;
+  }
+
+  .form-container {
+    @include display-flex();
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .form-signin .form-control {
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  .signup-btn {
+    background-color: darken(map-get($colors, secondary), 30);
+    color: map-get($colors, tertiary);
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1023.8px) and (min-width: 735.9px) and (orientation: landscape) {
+  .signup-background {
+    transform: translateY(0);
+  }
+  .signup-container {
+    @include display-flex();
+    height: 100%;
+    padding: 2rem 0 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .signup-card {
+    @include display-flex();
+    flex-direction: column;
+    border-radius: 3%;
+    background: rgba(132, 169, 172, 0.4);
+    padding: 1rem 0.5rem 0.5rem;
+    width: 80%;
+  }
+
+  .signup-header {
+    font-size: 2.5rem;
+    padding: 0.1rem 0;
+  }
+
+  .signup-text {
+    font-size: 1rem;
+    padding: 0 0.75rem;
+    color: map-get($colors, tertiary);
+  }
+
+  .signup-img {
+    margin: auto;
+    width: 150px;
+    opacity: 0.6;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000000;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0.25rem;
+  }
+
+  .form-signin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  input.form-control {
+    margin-bottom: 0;
+  }
+  .form-signin .form-control {
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 0.75rem;
+    width: 50%;
+    align-self: flex-start;
+  }
+
+  .signup-btn {
+    background-color: darken(map-get($colors, secondary), 30);
+    color: map-get($colors, tertiary);
+    font-size: 0.75rem;
+    height: auto;
+    padding: 10px;
+    width: 30%;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 1023.9px) and (orientation: landscape) {
+  .signup-container {
+    padding: 5rem;
+  }
+}

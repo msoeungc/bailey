@@ -8,12 +8,11 @@
 
 .navbar {
   background-color: map-get($colors, main);
-  padding: 0 3.5rem 1.5rem 0;
+  padding: 0 3.5rem 0.5rem 0;
 }
 
 .nav-link {
   font-size: 1.2rem;
-  font-weight: 200;
 }
 
 .navbar-nav li a:hover {
@@ -29,10 +28,10 @@
   text-align: right;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 640px) {
   .container-nav {
     background-color: map-get($colors, main);
-    padding: 1rem 1rem 2rem;
+    padding: 0.5rem;
     width: 100vw;
   }
 
@@ -43,5 +42,70 @@
 
   .navbar-brand {
     margin-right: 0;
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768.1px) and (min-width: 640.1px) {
+  .container-nav {
+    background-color: map-get($colors, main);
+    padding: 1rem 0.8rem;
+    width: 100vw;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 768.2px) and (orientation: portrait) {
+  .container-nav {
+    background-color: map-get($colors, main);
+    padding: 1rem 0.8rem 2rem;
+    width: 100vw;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 735.9px) and (orientation: landscape) {
+  .container-nav {
+    background-color: map-get($colors, main);
+    padding: 0.5rem 0.8rem;
+    width: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-height: 500px) and (orientation: portrait) {
+  .container-nav {
+    background-color: map-get($colors, main);
+    padding: 0.5rem 0.8rem;
+    width: 100vw;
   }
 }

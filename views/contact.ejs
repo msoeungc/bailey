@@ -1,34 +1,59 @@
 <%- include("partials/head"); -%>
-
+</head>
 <body>
   <div class="main-grid">
     <div class="header">
       <%- include("partials/header"); -%>
     </div>
     <main class="main">
-      <div class="contact-backgound"></div>
-        <div class="contact-container">
+      <div class="transparent-bg">
+        <div class="contact-backgound"></div>
+        <div class="contact-header">
+          <h1>Contact Bailey & Scout</h1>
+        </div>
+        <section class="contact-container">
           <div class="contact-card">
-            <img class="contact-img" src="/images/bailsmodel.jpg">
+            <img class="contact-img" src="/images/bailsmodel.JPG">
             </img>
             <div class="contact-info">
-              Name: Bailey <br />
-              Cellphone number: (098)123-4567 <br />
-              Email: Baileyiscute@email.com <br />
-              Address: 42 Wallaby Way, Sydney <br />
+              <ul class="contact-list">
+                <li>
+                  Name: Bailey
+                </li>
+                <li>
+                  Cellphone number: (098)123-4567
+                </li>
+                <li>
+                  Email: Baileyiscute@email.com
+                </li>
+                <li>
+                  Address: 42 Wallaby Way, Sydney
+                </li>
+              </ul>
             </div>
           </div>
           <div class="contact-card">
             <img class="contact-img" src="/images/scoutyelloweyes.jpg">
             </img>
             <div class="contact-info">
-              Name: Scout <br />
-              Cellphone number: (098)123-4567 <br />
-              Email: Scoutiscute@email.com <br />
-              Address: 42 Wallaby Way, Sydney <br />
+              <ul class="contact-list">
+                <li>
+                  Name: Scout
+                </li>
+                <li>
+                  Cellphone number: (098)123-4567
+                </li>
+                <li>
+                  Email: Scoutiscute@email.com
+                </li>
+                <li>
+                  Address: 42 Wallaby Way, Sydney
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
     </main>
     <footer class="footer">
       <%- include("partials/footer"); -%>

@@ -11,6 +11,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 // set up public static folders
+// allows access to files in public folder (css, js, images)
 app.use(express.static("public"));
 
 // set up bodyParser use
@@ -59,7 +60,6 @@ app.post("/signup", function(req, res) {
   newEmail.save();
   res.render("success");
 })
-
 
 // Listen for port to start server
 let port = process.env.PORT;

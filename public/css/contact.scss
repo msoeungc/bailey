@@ -1,9 +1,12 @@
 @import "_variables.scss";
-
 /* Contact page */
+.transparent-bg {
+  background-color: rgba(59, 105, 120, 0.6);
+  width: 100%;
+}
+
 .contact-backgound {
   background: url("../images/bailsandscout.jpg") center/cover;
-  transform: translateY(2rem);
   filter: grayscale(40%);
   width: 100vw;
   height: 100vh;
@@ -13,6 +16,11 @@
   z-index: -1;
 }
 
+.contact-header {
+  padding: 5rem 0 2rem;
+  font-size: 4rem;
+  color: map-get($colors, tertiary);
+}
 
 .contact-container {
   display: flex;
@@ -20,17 +28,14 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-  margin-top: 2rem;
-  padding: 30rem 0;
-  background-color: rgba(59, 105, 120, 0.6);
+  padding: 10rem 0 20rem;
 }
 
 .contact-card {
   display: flex;
   flex-direction: column;
   margin: 0 2rem;
-  width: 25rem;
-  border: 3px solid lighten(map-get($colors, main), 40%);
+  width: 30rem;
   border-radius: 3%;
   background: rgba(132, 169, 172, 0.4);
   justify-content: center;
@@ -51,10 +56,29 @@
   color: map-get($colors, tertiary);
 }
 
-@media (max-width: 40rem) {
+.contact-list {
+  list-style: none;
+  padding: 2rem 1rem;
+}
+
+.contact-list li {
+  padding: 0.5rem 0 0;
+}
+@media (max-width: 640px) {
+  .contact-backgound {
+    transform: translateY(0);
+  }
+  .contact-header {
+    padding: 3rem 0 1rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
   .contact-container {
     flex-direction: column;
-    padding: 5rem 0;
+    padding: 1.5rem 0;
     margin: auto;
   }
 
@@ -62,5 +86,67 @@
     width: 80%;
     padding: 1rem;
     margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768.1px) and (min-width: 640.1px) {
+  .contact-backgound {
+    transform: translateY(0);
+  }
+
+  .contact-header {
+    padding: 3rem 0 1rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 1.5rem 0;
+    margin: auto;
+  }
+
+  .contact-card {
+    width: 70%;
+    padding: 1rem 0.5rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 1024.1px) and (min-width: 767.0px) and (orientation: portrait) {
+  .contact-backgound {
+    transform: translateY(0);
+  }
+
+  .contact-header {
+    padding: 4rem 0 1rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 2.5rem 0;
+    margin: auto;
+  }
+
+  .contact-card {
+    width: 50%;
+    padding: 1.5rem 0.5rem;
+    margin: 2rem 0;
+
+    .li {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 1023.9px) and (orientation: landscape)   {
+  .contact-backgound {
+    width: 100%;
   }
 }
