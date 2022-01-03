@@ -1,27 +1,25 @@
   <%- include("partials/head"); -%>
   </head>
 
-  <body>
+  <body class="color-bg">
     <main class="main-grid">
       <div class="header">
         <%- include("partials/header"); -%>
       </div>
       <div class="main">
-        <section class="header-sec">
+        <section class="header-flex-container">
           <div class="home-background"></div>
           <div class="home-background2"></div>
-          <div class="header-flex-container">
-            <div class="transparent-bg-home">
-              <div class="title-content">
-                <h1 class="title-heading">See cute pictures of my dog, Bailey and my cat, Scout! </h1>
-                <p class="subtext-heading">
-                  <a href="/signup">Sign up</a> with your email for more Bailey & Scout content! (Example site)
-                </p>
-              </div>
+          <div class="transparent-bg-home">
+            <div class="title-content card-wrap">
+              <h1 class="title-heading">See cute pictures of my dog, Bailey and my cat, Scout! </h1>
+              <p class="subtext-heading">
+                <a href="/signup">Sign up</a> with your email for more Bailey & Scout content! (Example site)
+              </p>
             </div>
           </div>
         </section>
-        <section class="color-bg vid-1-cont">
+        <section class="vid-1-cont">
           <div class="vid-container">
             <video class="home-vid scout-vid" id="background-video" autoplay loop muted poster="">
               <source src="/images/vidbg/2.mp4" type="video/mp4">
@@ -29,16 +27,16 @@
             <div class="vid-header">
               <h2>Learn more about Bailey and Scout</h2>
               <a href="/aboutus">
-                <input class="about-btn" type="submit" value="Learn more">
+                <input class="about-btn btn-color2" type="submit" value="Bailey&Scout">
               </a>
             </div>
           </div>
         </section>
 
-        <section class="color-bg carousel">
+        <section class="carousel">
           <div class="carousel-sec">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-wrap">
+              <div class="card-wrap carousel-fade">
                 <div class="carousel-inner">
                   <!--1150px-->
                   <div class="carousel-item active">
@@ -76,38 +74,48 @@
           </video>
           <div class="vid-header">
             <h2>Bailey showing off his catching abilities</h2>
-            <a href="/signup">
-              <input class="signup-btn" type="submit" value="Sign up">
-            </a>
+            <!-- <a href="/signup"> -->
+            <!-- <input class="signup-btn" type="submit" value="Sign up"> -->
           </div>
+          <div class="home-fade-wrap">
+            <div class="home-form">
+              <h2 class="home-form-title">Sign up for more Bailey & Scout Content</h2>
+              <form class="form-signin" action="/signup" method="post">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" name="userEmail" class="form-control" placeholder="Email address">
+                <button class="signup-btn btn-color" type="submit">SIGN UP!</button>
+              </form>
+            </div>
+          </div>
+          <!-- </a> -->
+
         </div>
 
-        <section class="color-bg home-img-container">
-          <section class="home-img-sec">
+        <section class="home-img-container">
+          <div class="home-img-sec">
             <div class="img-flex-l">
               <h2 class="home-des">Bailey hanging out with his best friend, Nori!</h2>
               <div class="img-wrap home-imgs">
                 <div class="img"></div>
               </div>
             </div>
-          </section>
-          <section class="home-img-sec">
+          </div>
+          <div class="home-img-sec">
             <div class="img-flex-r">
               <h2 class="home-des">Scout being cute and staring into your soul</h2>
               <div class="img-wrap home-imgs">
                 <div class="img"></div>
               </div>
             </div>
-
-          </section>
-          <section class="home-img-sec">
+          </div>
+          <div class="home-img-sec">
             <div class="img-flex-l">
-              <h2 class="home-des">Bailey winking in his pumpkin bandana next to his pumpkin</h2>
+              <h2 class="home-des">Scout putting Bailey in his place</h2>
               <div class="img-wrap home-imgs">
                 <div class="img"></div>
               </div>
             </div>
-          </section>
+          </div>
         </section>
 
 

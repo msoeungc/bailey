@@ -78,15 +78,6 @@ input.form-control {
   margin-bottom: 1rem;
 }
 
-.signup-btn, .about-btn {
-  background-color: darken(map-get($colors, secondary), 30);
-  color: map-get($colors, tertiary);
-  border-radius: 3%;
-  box-shadow: 1px 1px 3px #000000;
-  font-weight: 500;
-  font-size: 1.1rem;
-  padding: 0.25rem 2.3rem;
-}
 @media (max-width: 640px) and (orientation: portrait) {
   .signup-container {
     @include display-flex();

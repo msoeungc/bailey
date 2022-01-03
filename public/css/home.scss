@@ -7,18 +7,27 @@
 //   box-shadow: 3px 3px 5px #000000;
 //   max-width: 750px;
 // }
+.header-flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+}
 
 .transparent-bg-home {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(59, 105, 120, 0.6);
 }
 
 .home-background {
-  background: url("/images/bailsCouch.jpg") center/cover;
+  background: url("/images/baileyDigging.jpg") center/cover;
   background-color: rgba(59, 105, 120, 0.6);
   z-index: -1;
   filter: grayscale(40%);
-  width: 50%;
+  width: 50vw;
   height: 100%;
   position: absolute;
 }
@@ -26,20 +35,14 @@
 .home-background2 {
   background: url("/images/scoutBlanket.jpg") center/cover;
   filter: grayscale(40%);
-  width: 50%;
+  width: 50vw;
   height: 100%;
   position: absolute;
   z-index: -1;
   margin-left: 50%;
 }
 
-.header-flex-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  height: 100vh;
-}
+
 
 .title-heading {
   font-size: 5rem;
@@ -59,7 +62,7 @@
 
 /* Bails carousel */
 .carousel {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .carousel-sec {
@@ -74,24 +77,24 @@
   display: none;
 }
 
-.carousel-wrap {
+.card-wrap{
   max-width: 100%;
   opacity: 0;
   transform: translateY(300px);
   transition: all .5s ease-in-out;
 
-  &.carousel-fade {
+  &.card-fade {
     opacity: 1;
     transform: translateY(0px);
   }
 }
 
 .carousel-inner {
-  width: 1145px;
+  width: 100%;
 }
 
 .carousel-img {
-  width: 100%;
+  width: 50vw;
 }
 /* Background Videos */
 .vid-1-cont {
@@ -105,9 +108,9 @@
   width: 100%;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   text-align: center;
 }
 
@@ -116,7 +119,7 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.9;
   position: absolute;
   top: 0;
   left: 0;
@@ -125,19 +128,83 @@
 .vid-header {
   position: relative;
   color: map-get($colors, tertiary);
-  font-size: 2rem;
+  align-self: center;
+  margin: auto;
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Home Form */
+.home-fade-wrap {
+  width: 25%;
+  height: auto;
+  box-sizing: border-box;
+  margin-top: auto;
+  opacity: 0;
+  transform: translateY(300px);
+  transition: all .5s ease-in-out;
+
+  &.form-fade {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.home-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: map-get($colors, main);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  padding: 3rem 5rem 10rem;
+}
+
+
+
+.home-form-title {
+  color: map-get($colors, tertiary);
+}
+
+// Buttons
+.signup-btn, .about-btn {
+  background: none;
+  color: map-get($colors, tertiary);
+  border-radius: 0;
+  box-shadow: 1px 1px 3px #000000;
+  letter-spacing: 0.35em;
+  font-size: 1.1rem;
+  padding: 0.25rem 2.3rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3;
+
+  &.btn-color {
+    box-shadow: inset 0 0 1em rgba(0,160,150,0.3), 0 0 1em rgba(0,160,150,0.3);
+    border: darken(map-get($colors, secondary), 20) solid 2px;
+  }
+
+  &.btn-color:hover {
+    background-color: (map-get($colors, secondary));
+    box-shadow: inset 0 0 0 rgba(0,170,170,0.3), 0 0 1.5em rgba(0,170,170,0.3);
+  }
+
+  &.btn-color2:hover {
+    box-shadow: inset 0 0 0 rgba(211,211,211,0.5), 0 0 1.5em rgba(211,211,211,0.7);
+  }
+
 }
 
 /* Bails image grid */
 .home-img-container {
-  padding: 10% 0;
+  padding: 10% 0 3%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-
-section.home-img-sec {
+.home-img-sec {
   position: relative;
   height: 100vh;
   width: 100%;
@@ -157,14 +224,14 @@ section.home-img-sec {
   display: flex;
   height: 100%;
   flex-direction: row;
-  margin-left: 5%;
+  padding-left: 5%;
 }
 
 .img-flex-r {
   display: flex;
   height: 100%;
   flex-direction: row-reverse;
-  margin-right: 5%;
+  padding-right: 5%;
 }
 
 .img-wrap.active {
@@ -191,29 +258,41 @@ section.home-img-sec {
   background-size: cover;
   background-position: center;
   transform: scale(1.6);
-  filter: grayscale(50%);
+  filter: grayscale(20%);
 }
 
-h2.home-des {
+.home-des {
   position: absolute;
   opacity: 0;
+  font-size: 3rem;
   top: 70%;
   z-index: 2;
   transition: .1s;
-  color: map-get($colors, tertiary);
+  color: lighten(map-get($colors, secondary), 10);
 }
 
-h2.home-des.active {
+.home-des.active {
   opacity: 1;
   transition: 3s;
 }
 
-@media (max-width: 640px) {
+
+// Iphone 6plus - X portrait
+@media (max-width: 640px) and (orientation: portrait) {
+  .header-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+  }
+
   .home-background {
     background: url("../images/bailsGarden.jpg") center/cover;
     z-index: -1;
     width: 100%;
-    height: 53%;
+    height: 50%;
     position: absolute;
   }
 
@@ -221,19 +300,17 @@ h2.home-des.active {
     background: url("../images/scoutBlanket.jpg") center/cover;
     filter: grayscale(40%);
     width: 100%;
-    height: 60%;
-    transform: translateY(-2rem);
+    height: 50%;
+    transform: translateY(50vh);
     position: absolute;
     z-index: -1;
-    margin: 0;
-    margin-top: 100%;
   }
-  .header-flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+
+
+  .transparent-bg-home {
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(59, 105, 120, 0.6);
   }
 
   h1.title-heading {
@@ -247,12 +324,9 @@ h2.home-des.active {
     padding: 0 2rem;
   }
 
-  .carousel-inner {
-    width: 100%;
-  }
-
-  .carousel-img {
-    max-width: 350px;
+  // Videos
+  .vid-1-cont {
+    padding: 20% 0 0;
   }
 
   .vid-container {
@@ -262,52 +336,230 @@ h2.home-des.active {
     flex-direction: column;
   }
 
-  .vid-desc {
-    font-size: 1.4rem;
-    padding: 2rem 0 3rem;
-    width: 100%;
-    color: map-get($colors, tertiary);
+  .vid-header h2 {
+  font-size: 1.5rem;
   }
 
   .home-vid {
     width: 100%;
     padding-bottom: 2rem;
+    height: 100vh;
   }
 
   .bails-vid {
-    padding: 0;
+    padding-bottom: 15rem;
   }
 
-  .scout-vid {
-    padding: 0 0 5rem 0;
+  // Carousel
+  .carousel {
+  padding: 7rem 0;
+}
+  .carousel-inner {
+    width: 100vw;
   }
 
-  .home-img-grid {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(6, auto);
-    grid-template-areas: "img1" "des1" "img2" "des2" "img3" "des3";
-  }
-
-  .home-img1,
-  .home-img2,
-  .home-img3 {
-    margin: auto;
-    padding: 1rem 0;
-  }
-
-  .home-des {
+  .carousel-img {
     width: 100%;
-    text-align: center;
-    font-size: 0.8rem;
+    height: 100%;
+  }
+
+
+  // form
+  .home-fade-wrap {
+    width: 100%;
     height: auto;
-    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    margin-top: 3rem;
+    transform: translateY(1rem);
+    transition: all .5s ease-in-out;
+
+    &.form-fade {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .home-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colors, main);
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+    padding: 2rem 5rem;
+  }
+
+  .home-form-title {
+    font-size: 1rem;
+  }
+
+  // Button
+  .signup-btn {
+    margin-top: 0;
+  }
+
+  /* Bails image grid */
+  .home-img-container {
+    padding: 2rem 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+
+  .home-img-sec {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .img-wrap {
+    position: relative;
+    padding: 1% 0 0;
+    height: 100vh;
+    width: 1px;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .img-flex-l {
+    @include display-flex();
+    padding-left: 0;
+    height: 100%
+  }
+
+  .img-flex-r {
+    @include display-flex();
+    padding-right: 0;
+    height: 100%;
+  }
+
+  .img-wrap.active {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0s, width 2s;
+  }
+
+  .img-wrap.active > .img {
+    transform: scale(1);
+    transition: 0.5s ease-out;
   }
 
   .home-imgs {
-    max-width: 300px;
+    height: 80%;
+    box-shadow: $boxshadow;
+  }
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.5);
+    filter: grayscale(20%);
+  }
+
+  h2.home-des {
+    position: absolute;
+    opacity: 0;
+    font-size: 1rem;
+    top: 92%;
+    z-index: -1;
+    transition: .1s;
+    color: lighten(map-get($colors, secondary), 10);
+  }
+
+  h2.home-des.active {
+    opacity: 1;
+    transition: 3s;
   }
 }
+
+// Iphone 6Plus - X landscape
+@media (max-width: 1023.8px) and (min-width: 735.9px) and (orientation: landscape) {
+  .home-background {
+    background: url("../images/bailsGarden.jpg") center/cover;
+    background-color: rgba(59, 105, 120, 0.6);
+    transform: translateY(0);
+    filter: grayscale(40%);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .home-background2 {
+    background: url("../images/scoutBlanket.jpg") center/cover;
+    filter: grayscale(40%);
+    transform: translateY(0);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: 0 0 0 50%;
+  }
+
+  .header-flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: -1rem 0 0 0;
+    height: 100vh;
+  }
+
+
+
+    h1.title-heading {
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 6rem 4rem 0;
+    }
+
+    .subtext-heading {
+      font-size: 1rem;
+      padding: 0 2rem;
+    }
+
+    .carousel-inner {
+      width: 100%;
+    }
+
+    .carousel-img {
+      max-width: 450px;
+    }
+
+    .vid-desc {
+      width: 100%;
+      padding-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .vid-container {
+      @include display-flex();
+      flex-direction: column;
+    }
+
+      .home-vid {
+        width: 100%;
+        padding: 2rem 0 0;
+      }
+
+      .scout-vid {
+        padding-top: 0;
+        padding-bottom: 3rem;
+      }
+}
+
+
 @media (max-width: 768.1px) and (min-width: 640.1px) and (orientation: portrait) {
 
   .home-background {
@@ -453,82 +705,7 @@ h2.home-des.active {
   }
 }
 
-// Iphone 6/7/8 Plus & Iphone X landscape
 
-@media (max-width: 1023.8px) and (min-width: 735.9px) and (orientation: landscape) {
-  .home-background {
-    background: url("../images/bailsGarden.jpg") center/cover;
-    background-color: rgba(59, 105, 120, 0.6);
-    transform: translateY(0);
-    filter: grayscale(40%);
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .home-background2 {
-    background: url("../images/scoutBlanket.jpg") center/cover;
-    filter: grayscale(40%);
-    transform: translateY(0);
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    margin: 0 0 0 50%;
-  }
-
-  .header-flex-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: -1rem 0 0 0;
-    height: 100vh;
-  }
-
-
-
-    h1.title-heading {
-      text-align: center;
-      font-size: 2.5rem;
-      padding: 6rem 4rem 0;
-    }
-
-    .subtext-heading {
-      font-size: 1rem;
-      padding: 0 2rem;
-    }
-
-    .carousel-inner {
-      width: 100%;
-    }
-
-    .carousel-img {
-      max-width: 450px;
-    }
-
-    .vid-desc {
-      width: 100%;
-      padding-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .vid-container {
-      @include display-flex();
-      flex-direction: column;
-    }
-
-      .home-vid {
-        width: 100%;
-        padding: 2rem 0 0;
-      }
-
-      .scout-vid {
-        padding-top: 0;
-        padding-bottom: 3rem;
-      }
-}
 
 @media (max-width: 1366px) and (min-width: 1023.9px) and (orientation: landscape) {
   .home-background {

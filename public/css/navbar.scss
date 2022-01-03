@@ -4,6 +4,7 @@
   background-color: map-get($colors, main);
   padding: 1rem 15rem 0.5rem;
   width: 100vw;
+  overflow: hidden;
 }
 
 .navbar {
